@@ -2,9 +2,9 @@ public class Pensioner extends Person {
 
     private double pension;
 
-    public Pensioner(String name, int age, int height, int weight, double pension) {
-        super(name, age, height, weight);
-        this.pension = pension;
+
+    public Pensioner() {
+
     }
 
     public double getPension() {

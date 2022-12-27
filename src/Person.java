@@ -13,6 +13,9 @@ public abstract class Person {
         this.name = name;
     }
 
+    protected Person() {
+    }
+
     public void info() {
         System.out.println("Person: " + name + ", " + age + " years old, height: " + height + " cm");
     }
@@ -41,13 +44,12 @@ public abstract class Person {
         if (age >= 0) {
             this.age = age;
         } else if (age < 0) {
-            System.err.print("Error. Age was entered negative. ");
+            System.err.print("Error. " + getName() + "'s age was entered negative. ");
             System.out.println("Please, enter some positive number for age");
         } else {
-            System.err.print("Error. Age was entered incorrectly. ");
+            System.err.print("Error. " + getName() + "'s age was entered incorrectly. ");
             System.out.println("Please, enter some positive number for age");
         }
-
     }
 
     public void setHeight(int height) {
